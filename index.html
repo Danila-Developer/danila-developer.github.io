@@ -108,9 +108,9 @@
          <div class="contact__title">Связаться с нами</div>
          <div class="contact__form">
             <form action="POST" onSubmit="createObject(); return false">
-               <input type="text" placeholder="Имя">
-               <input type="text" placeholder="Название компании">
-               <input type="email" placeholder="E-mail">
+               <input id="Name" type="text" placeholder="Имя">
+               <input id="Company" type="text" placeholder="Название компании">
+               <input id="email" type="email" placeholder="E-mail">
                <div class="contact__button"><button onSubmit="createObject(); return false">Отправить</button>Отправить</div>
                <button onSubmit="createObject(); return false"></button>
             </form>
@@ -128,6 +128,50 @@
    <script src="scripts/jquery.min.js"></script>
    <script src="scripts/slick/slick.min.js"></script>
    <script src="scripts/main.js"></script>
+   
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://webtracking-v01.bpmonline.com/JS/track-cookies.js"></script>
+<script src="https://webtracking-v01.bpmonline.com/JS/create-object.js"></script>
+<script>
+
+/**
+* Replace the "css-selector" placeholders in the code below with the element selectors on your landing page.
+* You can use #id or any other CSS selector that will define the input field explicitly.
+* Example: "Email": "#MyEmailField".
+* If you don't have a field from the list below placed on your landing, leave the placeholder or remove the line.
+*/
+var config = {
+    fields: {
+        "FullName": "#Name", // Name of a contact
+        "PhoneNumber": "#Company", // Contact's mobile phone
+        "Email": "#email" // Contact's email
+    },
+    contactFields: {
+        "FullName": "css-selector", // Name of a contact
+        "Phone": "css-selector", // Contact's mobile phone
+        "Email": "css-selector" // Contact's email
+    },
+    customFields: {"WebFormId":"a152e755-bed8-49ae-9a13-f958f2d427c8"},
+    landingId: "a152e755-bed8-49ae-9a13-f958f2d427c8",
+    serviceUrl: "https://017947-service-enterprise.terrasoft.ru/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
+    redirectUrl: ""
+};
+/**
+* The function below creates a object from the submitted data.
+* Bind this function call to the "onSubmit" event of the form or any other elements events.
+* Example: <form class="mainForm" name="landingForm" onSubmit="createObject(); return false">
+*/
+function createObject() {
+    landing.createObjectFromLanding(config);
+}
+/**
+* The function below inits landing page using URL parameters.
+*/
+function initLanding() {
+    landing.initLanding(config);
+}
+jQuery(document).ready(initLanding);
+</script>
    
 </body>
 </html>
