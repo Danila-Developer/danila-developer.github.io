@@ -160,6 +160,7 @@ header nav .nav-item:hover{
    width: 120px;
    cursor: pointer;
    margin-bottom: 40px;
+   border-radius: 0px;
 }
 
 footer{
