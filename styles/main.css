@@ -60,6 +60,7 @@ header nav .nav-item:hover{
 .service{
    background-color: #EFEFEF;
    padding-bottom: 10px;
+   width: 100%
 }
 
 .service__title{
