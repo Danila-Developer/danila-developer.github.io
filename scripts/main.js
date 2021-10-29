@@ -6,7 +6,7 @@ buttons.forEach((item)=>{
    });
 });
 
-let close = document.querySelector('.close_i');
+let close = document.querySelector('.close');
 close.addEventListener('click', ()=>{
    popap.classList.remove('active');
 });
