@@ -108,9 +108,11 @@
          <div class="contact__title">Связаться с нами</div>
          <div class="contact__form">
             <form method="POST" onSubmit="createObject(); return false">
-               <input id="Name" type="text" placeholder="Имя">
-               <input id="Company" type="text" placeholder="Название компании">
+               <input id="name" type="text" placeholder="ФИО">
                <input id="email" type="email" placeholder="E-mail">
+               <input id="phoneNumber" type="tel" placeholder="Номер телефона">
+               <input id="company" type="text" placeholder="Название компании">
+               
                <div class="contact__button"><button onSubmit="createObject(); return false">Отправить</button>Отправить</div>
                <button type="submit"></button>
             </form>
@@ -142,14 +144,16 @@
 */
 var config = {
     fields: {
-        "FullName": "#Name", // Name of a contact
-        "PhoneNumber": "#Company", // Contact's mobile phone
-        "Email": "#email" // Contact's email
+        "FullName": "#тame", // Name of a contact
+        "PhoneNumber": "#phoneNumber", // Contact's mobile phone
+        "Email": "#email", // Contact's email
+        "Company": "#company"
     },
     contactFields: {
         "FullName": "#Name", // Name of a contact
-        "Phone": "#Name", // Contact's mobile phone
-        "Email": "#email" // Contact's email
+        "Phone": "#phoneNumber", // Contact's mobile phone
+        "Email": "#email", // Contact's email
+        "Company": "#company"
     },
     customFields: {"WebFormId":"a152e755-bed8-49ae-9a13-f958f2d427c8"},
     landingId: "a152e755-bed8-49ae-9a13-f958f2d427c8",
